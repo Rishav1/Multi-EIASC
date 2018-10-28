@@ -1,0 +1,7 @@
+*.html
+*.ipynb_checkpoints
+*.DS_Store
+*.idea
+*.pyc
+*__pychache__
+*.npy
