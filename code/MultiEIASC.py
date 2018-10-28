@@ -10,9 +10,9 @@ HIGHX = 5
 LOWY = -5
 HIGHY = 5
 FINE = 100
-T_FINE = 30
+T_FINE = 360
 UMFfactor = 1
-LMFfactor = 0.8
+LMFfactor = 0.6
 
 X = np.linspace(LOWX, HIGHX, FINE)
 Y = np.linspace(LOWY, HIGHY, FINE)
@@ -27,7 +27,7 @@ def plot_boundary(Xgrid, Ygrid, UMFgrid, LMFgrid):
 
     UMFsurf = go.Surface(x=Xgrid, y=Ygrid, z=UMFgrid, opacity=0.5,colorscale='Viridis',colorbar=dict(showticklabels=False))
     LMFsurf = go.Surface(x=Xgrid, y=Ygrid, z=LMFgrid, opacity=0.8, colorscale='Viridis')
-    CENTbound = go.Scatter3d(x=CENTROID_BOUND_x, y=CENTROID_BOUND_y, z=np.array([0] * CENTROID_BOUND_x.size), showlegend=False, mode='markers', marker=dict(size=4, color='black', line=dict(color='red', width=0.5)))
+    CENTbound = go.Scatter3d(x=CENTROID_BOUND_x, y=CENTROID_BOUND_y, z=np.array([0] * CENTROID_BOUND_x.size), showlegend=False, mode='markers', marker=dict(size=2, color='red', line=dict(color='red', width=0.5)))
 
     data = [UMFsurf, LMFsurf, CENTbound]
 
